@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1016309596015",
+    "project_id": "styleupphysio",
+    "storage_bucket": "styleupphysio.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1016309596015:android:f1cc25fdd73074b2c3f29a",
+        "android_client_info": {
+          "package_name": "com.kev.styleupphysiospine"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1016309596015-f020hr9gn93f0buhbus5b20498cb387b.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBVzTk0remv856uDQgJtrV8zjQplMThzHU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1016309596015-f020hr9gn93f0buhbus5b20498cb387b.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

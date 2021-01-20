@@ -2,30 +2,29 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@color/colorPrimary"
-    tools:context=".ui.login">
+    android:layout_height="match_parent">
 
-
-    <TextView
-        android:id="@+id/tv_title"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/app_name"
-        android:textSize="50sp"
-        android:layout_marginStart="25dp"
-        android:layout_marginBottom="10dp"
-        android:layout_above="@id/tv_subtitle"/>
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="-3dp"
+        android:layout_marginTop="63dp"
+        android:paddingTop="30dp"
+        android:src="@drawable/logo" />
 
     <TextView
-        android:id="@+id/tv_subtitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text=""
-        android:textSize="17sp"
-        android:layout_marginStart="25dp"
-        android:layout_marginBottom="50dp"
-        android:layout_above="@id/et_email"/>
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="233dp"
+        android:text="Create Account Below"
+        android:textColor="@color/purple_700"
+        android:textSize="20sp" />
+
 
     <EditText
         android:id="@+id/et_email"
@@ -55,35 +54,37 @@
         android:textSize="15sp" />
 
     <Button
-        android:id="@+id/btn_login"
+        android:id="@+id/btn_signup"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_below="@id/et_password"
         android:layout_marginLeft="20dp"
         android:layout_marginTop="22dp"
+        android:textSize="30sp"
         android:layout_marginRight="20dp"
         android:background="@drawable/btn_custom"
-        android:text="Login"
-        android:textColor="#00000" />
-
-
-    <ImageView
-        android:layout_width="30dp"
-        android:layout_height="30dp"
-        android:src="@drawable/ic_arrow_right"
-        android:layout_above="@id/swipeRight"
-        android:layout_centerHorizontal="true"/>
+        android:text="SignUp"
+        android:textAlignment="center"
+        android:textColor="@color/white" />
 
     <TextView
-        android:id="@+id/swipeRight"
+        android:id="@+id/clickhereTv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Swipe left to Register"
-        android:textSize="15sp"
-        android:textColor="@color/white"
-        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/btn_login"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginBottom="20dp"/>
+        android:layout_marginStart="-26dp"
+        android:layout_marginTop="120dp"
+        android:layout_marginEnd="26dp"
+        android:layout_marginBottom="121dp"
+        android:paddingLeft="60dp"
+        android:text="Already Have an Account? Click Here!"
+        android:textAlignment="center"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="10sp"
+        android:textStyle="italic" />
 
 
 </RelativeLayout>

@@ -3,6 +3,8 @@ package com.kev.styleupphysiospine.ui;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.ProgressDialog;
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
@@ -27,6 +29,7 @@ private EditText inputPassword, inputEmail;
     private FirebaseAuth auth;
     private ProgressBar progressBar;
     private Button btnLogin, btnResetPassword;
+    private Context context;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -77,6 +80,12 @@ private EditText inputPassword, inputEmail;
                     return;
                 }
 
+                ProgressDialog progressDialog = new ProgressDialog(LoginActivity.this, R.style.Theme_AppCompat_DayNight_Dialog_Alert);
+                progressDialog.setTitle("Authenticating");
+                progressDialog.setMessage("Checking Credentials");
+                progressDialog.setIndeterminate(true);
+                progressDialog.show();
+
 //                progressBar.setVisibility(View.VISIBLE);
 
                 //authenticate user
@@ -96,7 +105,7 @@ private EditText inputPassword, inputEmail;
                                         Toast.makeText(LoginActivity.this, "Login Failed. Please check your credentials", Toast.LENGTH_LONG).show();
                                     }
                                 } else {
-                                    Intent intent = new Intent(LoginActivity.this, MainActivity.class);
+                                    Intent intent = new Intent(LoginActivity.this, UpdateUserProfileActivity.class);
                                     startActivity(intent);
                                     finish();
                                 }

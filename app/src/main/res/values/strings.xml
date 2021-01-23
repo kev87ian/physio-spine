@@ -1,4 +1,4 @@
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
     <string name="app_name">Styleup Physio &amp; Spine</string>
     <string name="styleup_physio_spine"><![CDATA[Styleup Physio & Spine]]></string>
     <string name="email">Email Id</string>
@@ -21,4 +21,9 @@
     <string name="back">BACK</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="register">REGISTER</string>
+    <string name="login_email_hint">Email</string>
+    <string name="login_password_hint">Password</string>
+    <string name="signup_login_hint">Already have an account? Sign In</string>
+
 </resources>

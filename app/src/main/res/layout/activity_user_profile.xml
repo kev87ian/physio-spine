@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.UpdateUserProfileActivity"
+    android:orientation="vertical"
+    android:gravity="center">
+    
+    <ImageView
+        android:layout_width="200dp"
+        android:layout_height="150dp"
+        android:background="@drawable/ic_launcher_background"
+        android:onClick="chooseImage" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Names"
+        android:inputType="textPersonName"
+        android:textColor="#000"
+        android:layout_margin="10dp"
+        android:id="@+id/name_et"
+        android:backgroundTint="@color/colorPrimary"
+        android:autoText="true" />
+
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Phone Number"
+        android:inputType="phone"
+        android:textColor="#000"
+        android:layout_margin="10dp"
+        android:id="@+id/phone_et"
+        android:backgroundTint="@color/colorPrimary"
+        android:autoText="true" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Gender"
+        android:inputType="textPersonName"
+        android:textColor="#000"
+        android:layout_margin="10dp"
+        android:id="@+id/gender_et"
+        android:backgroundTint="@color/colorPrimary"
+        android:autoText="true" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Age"
+        android:inputType="number"
+        android:textColor="#000"
+        android:layout_margin="10dp"
+        android:id="@+id/age_et"
+        android:backgroundTint="@color/colorPrimary"
+        android:autoText="true" />
+
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Email address"
+        android:inputType="textPersonName"
+        android:textColor="#000"
+        android:layout_margin="10dp"
+        android:id="@+id/email_et"
+        android:backgroundTint="@color/colorPrimary"
+        android:autoText="true" />
+
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Create Profile"
+        android:id="@+id/save_profile_btn"
+        android:layout_margin="10dp" />
+
+    <ProgressBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+        android:indeterminateTint="@color/colorPrimary"
+        android:visibility="invisible"
+        android:id="@+id/progressBar" />
+
+
+
+</LinearLayout>

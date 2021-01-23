@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.ShowUserProfileActivity">
+
+   <ImageView
+       android:layout_width="200dp"
+       android:layout_height="150dp"
+       android:layout_gravity="center"
+       android:src="@drawable/ic_launcher_background" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center">
+
+        <TextView
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:text="Name"
+            android:textStyle="bold"
+            android:textSize="18dp"
+            android:textColor="#000"
+            android:layout_marginLeft="10dp"
+            android:padding="10dp"
+            android:textAlignment="viewStart" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Name"
+            android:id="@+id/name_tv_sp"
+            android:textSize="16dp"
+            android:padding="10dp"
+            android:textAlignment="viewStart" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center">
+
+        <TextView
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:text="Age"
+            android:textStyle="bold"
+            android:textColor="#000"
+            android:textSize="18dp"
+            android:layout_marginLeft="10dp"
+            android:padding="10dp"
+            android:textAlignment="viewStart" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Age"
+            android:id="@+id/age_tv_sp"
+            android:textSize="20dp"
+            android:padding="10dp"
+            android:textAlignment="viewStart" />
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center">
+
+        <TextView
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:text="Gender"
+            android:textStyle="bold"
+            android:textSize="18dp"
+            android:textColor="#000"
+            android:layout_marginLeft="10dp"
+            android:padding="10dp"
+            android:textAlignment="viewStart" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Gender"
+            android:id="@+id/gender_tv_sp"
+            android:textSize="16dp"
+            android:padding="10dp"
+            android:textAlignment="viewStart" />
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center">
+
+        <TextView
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:text="Phone Number"
+            android:textStyle="bold"
+            android:textSize="18dp"
+            android:textColor="#000"
+            android:layout_marginLeft="10dp"
+            android:padding="10dp"
+            android:textAlignment="viewStart" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Phone Number"
+            android:id="@+id/phone_tv_sp"
+            android:textSize="16dp"
+            android:padding="10dp"
+            android:textAlignment="viewStart" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center">
+
+        <TextView
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:text="Email Address"
+            android:textStyle="bold"
+            android:textSize="18dp"
+            android:textColor="#000"
+            android:layout_marginLeft="10dp"
+            android:padding="10dp"
+            android:textAlignment="viewStart" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Enail Address"
+            android:id="@+id/email_tv_sp"
+            android:textSize="20dp"
+            android:padding="10dp"
+            android:textAlignment="viewStart" />
+    </LinearLayout>
+    
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/colorPrimaryDark"
+        android:src="@drawable/ic_baseline_edit_24"
+        android:layout_gravity="end"
+        android:layout_marginRight="17dp"
+        android:layout_marginTop="50dp"
+        android:id="@+id/floatingbtn_sp" />
+
+
+</LinearLayout>

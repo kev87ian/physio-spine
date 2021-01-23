@@ -83,8 +83,8 @@ private EditText inputPassword, inputEmail;
                 ProgressDialog progressDialog = new ProgressDialog(LoginActivity.this, R.style.Theme_AppCompat_DayNight_Dialog_Alert);
                 progressDialog.setTitle("Authenticating");
                 progressDialog.setMessage("Checking Credentials");
-                progressDialog.setIndeterminate(true);
                 progressDialog.show();
+    //            progressDialog.setCancelable(false);
 
 //                progressBar.setVisibility(View.VISIBLE);
 
@@ -103,6 +103,7 @@ private EditText inputPassword, inputEmail;
                                         inputPassword.setError("Password must be at least 6 characters");
                                     } else {
                                         Toast.makeText(LoginActivity.this, "Login Failed. Please check your credentials", Toast.LENGTH_LONG).show();
+                                        progressDialog.dismiss();
                                     }
                                 } else {
                                     Intent intent = new Intent(LoginActivity.this, UpdateUserProfileActivity.class);

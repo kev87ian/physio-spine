@@ -64,7 +64,7 @@
             android:layout_height="wrap_content"
             android:text="Age"
             android:id="@+id/age_tv_sp"
-            android:textSize="20dp"
+            android:textSize="16dp"
             android:padding="10dp"
             android:textAlignment="viewStart" />
 
@@ -149,9 +149,9 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Enail Address"
+            android:text="Email Address"
             android:id="@+id/email_tv_sp"
-            android:textSize="20dp"
+            android:textSize="16dp"
             android:padding="10dp"
             android:textAlignment="viewStart" />
     </LinearLayout>

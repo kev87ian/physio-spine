@@ -12,11 +12,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.DayNight.DarkActionBar">
-        <activity android:name=".ui.ShowUserProfileActivity"></activity>
+        <activity android:name=".ui.LoginActivity"></activity>
         <activity android:name=".ui.UpdateUserProfileActivity" />
         <activity android:name=".ui.ResetPasswordActivity" />
         <activity android:name=".ui.SignUpActivity" />
-        <activity android:name=".ui.LoginActivity">
+        <activity android:name=".ui.ShowUserProfileActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

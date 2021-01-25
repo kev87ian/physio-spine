@@ -41,6 +41,7 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(new Intent(this, LoginActivity.class));
                 Toast.makeText(this, "Thank you for using the app", Toast.LENGTH_LONG).show();
 
+
                 break;
         }
 

@@ -19,6 +19,7 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.kev.styleupphysiospine.MainActivity;
 import com.kev.styleupphysiospine.R;
 
@@ -30,6 +31,8 @@ private EditText inputPassword, inputEmail;
     private ProgressBar progressBar;
     private Button btnLogin, btnResetPassword;
     private Context context;
+    FirebaseAuth.AuthStateListener mAuthListener;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -48,7 +51,22 @@ private EditText inputPassword, inputEmail;
             finish();
         }
 
+
         auth = FirebaseAuth.getInstance();
+        mAuthListener = new FirebaseAuth.AuthStateListener(){
+            @Override
+            public  void  onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth){
+                FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+                if(user!=null){
+                    Intent intent = new Intent(LoginActivity.this, MainActivity.class);
+                    startActivity(intent);
+                    finish();
+                }
+            }
+
+
+        };
+
 
         clickMe.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -106,7 +124,7 @@ private EditText inputPassword, inputEmail;
                                         progressDialog.dismiss();
                                     }
                                 } else {
-                                    Intent intent = new Intent(LoginActivity.this, UpdateUserProfileActivity.class);
+                                    Intent intent = new Intent(LoginActivity.this, MainActivity.class);
                                     startActivity(intent);
                                     finish();
                                 }

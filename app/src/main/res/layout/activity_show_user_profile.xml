@@ -8,15 +8,27 @@
     tools:context=".ui.ShowUserProfileActivity">
 
    <ImageView
+       android:layout_marginTop="40dp"
        android:layout_width="200dp"
        android:layout_height="150dp"
        android:layout_gravity="center"
-       android:src="@drawable/ic_launcher_background" />
+       android:id="@+id/profilePictureSp"
+       android:src="@drawable/logo" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Your Profile"
+        android:textAlignment="center"
+        android:paddingTop="20dp"
+        android:textColor="#000"
+        android:textStyle="bold" />
+
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
+        android:paddingTop="20dp"
         android:layout_gravity="center">
 
         <TextView
@@ -95,8 +107,6 @@
             android:textSize="16dp"
             android:padding="10dp"
             android:textAlignment="viewStart" />
-
-
     </LinearLayout>
 
 
@@ -125,8 +135,6 @@
             android:textSize="16dp"
             android:padding="10dp"
             android:textAlignment="viewStart" />
-
-
     </LinearLayout>
 
     <LinearLayout

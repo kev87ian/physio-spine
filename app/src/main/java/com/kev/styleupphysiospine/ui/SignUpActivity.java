@@ -34,7 +34,7 @@ public class SignUpActivity extends AppCompatActivity {
     private EditText inputEmail, inputPassword, inputName, inputAge, inputNumber;
     private Button btnSignIn,  btnResetPassword;
     private TextView clickHere;
-    //  private ProgressBar progressBar;
+     private ProgressBar progressBar;
     private FirebaseAuth auth;
     FirebaseFirestore firebaseFirestore;
     String userID;

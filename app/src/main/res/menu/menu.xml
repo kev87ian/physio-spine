@@ -7,7 +7,7 @@
         android:title="Logout" />
 
     <item
-        android:id="@+id/updateProfile"
-        android:title="Update Profile"/>
+        android:id="@+id/showProfile"
+        android:title="Show Profile"/>
 
 </menu>

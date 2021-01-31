@@ -11,6 +11,7 @@ import android.widget.Toast;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.kev.styleupphysiospine.ui.LoginActivity;
+import com.kev.styleupphysiospine.ui.ShowUserProfileActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -40,6 +41,10 @@ public class MainActivity extends AppCompatActivity {
                 finish();
                 startActivity(new Intent(this, LoginActivity.class));
                 Toast.makeText(this, "Thank you for using the app", Toast.LENGTH_LONG).show();
+
+            case R.id.showProfile:
+                startActivity(new Intent(this, ShowUserProfileActivity.class));
+
 
 
                 break;

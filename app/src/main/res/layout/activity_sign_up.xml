@@ -31,11 +31,8 @@ android:fitsSystemWindows="true">
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Register Account"
-
         android:layout_gravity="center"
         android:paddingTop="15dp" />
-
-
 
     <!-- Email Label -->
     <com.google.android.material.textfield.TextInputLayout

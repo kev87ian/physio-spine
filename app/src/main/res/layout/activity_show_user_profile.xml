@@ -22,8 +22,6 @@
         android:paddingTop="20dp"
         android:textColor="#000"
         android:textStyle="bold" />
-
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -164,15 +162,15 @@
             android:textAlignment="viewStart" />
     </LinearLayout>
     
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:backgroundTint="@color/colorPrimaryDark"
-        android:src="@drawable/ic_baseline_edit_24"
-        android:layout_gravity="end"
-        android:layout_marginRight="17dp"
-        android:layout_marginTop="50dp"
-        android:id="@+id/floatingbtn_sp" />
+<!--    <com.google.android.material.floatingactionbutton.FloatingActionButton-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:backgroundTint="@color/colorPrimaryDark"-->
+<!--        android:src="@drawable/ic_baseline_edit_24"-->
+<!--        android:layout_gravity="end"-->
+<!--        android:layout_marginRight="17dp"-->
+<!--        android:layout_marginTop="50dp"-->
+<!--        android:id="@+id/floatingbtn_sp" />-->
 
 
 </LinearLayout>

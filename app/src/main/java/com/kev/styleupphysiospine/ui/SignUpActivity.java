@@ -34,7 +34,7 @@ public class SignUpActivity extends AppCompatActivity {
     private EditText inputEmail, inputPassword, inputName, inputAge, inputNumber;
     private Button btnSignIn,  btnResetPassword;
     private TextView clickHere;
-     private ProgressBar progressBar;
+  //   private ProgressBar progressBar;
     private FirebaseAuth auth;
     FirebaseFirestore firebaseFirestore;
     String userID;
@@ -70,10 +70,6 @@ public class SignUpActivity extends AppCompatActivity {
                 String phoneNumber = inputNumber.getText().toString().trim();
                 String age = inputAge.getText().toString().trim();
 
-                if (TextUtils.isEmpty(email)) {
-                    Toast.makeText(getApplicationContext(), "Enter email address!", Toast.LENGTH_SHORT).show();
-                    return;
-                }
                 if (TextUtils.isEmpty(name)) {
                     Toast.makeText(getApplicationContext(), "Enter Name!", Toast.LENGTH_SHORT).show();
                     return;
@@ -83,6 +79,8 @@ public class SignUpActivity extends AppCompatActivity {
                     Toast.makeText(getApplicationContext(), "Enter a valid phone number!", Toast.LENGTH_SHORT).show();
                     return;
                 }
+
+
                 if (TextUtils.isEmpty(age)) {
                     Toast.makeText(getApplicationContext(), "Enter your age!", Toast.LENGTH_SHORT).show();
                     return;
@@ -131,9 +129,8 @@ public class SignUpActivity extends AppCompatActivity {
                                             Log.e("TAG", "onFailure "+ e.toString());
                                         }
                                     });
-
                                 }
-                                //                                //saving user id of logged in user
+                                                              //saving user id of logged in user
 
                                 ProgressDialog progressDialog = new ProgressDialog(SignUpActivity.this, R.style.Theme_AppCompat_DayNight_Dialog_Alert);
                                 progressDialog.setTitle("Signing you Up");

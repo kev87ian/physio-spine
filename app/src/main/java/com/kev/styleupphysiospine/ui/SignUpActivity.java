@@ -105,7 +105,7 @@ public class SignUpActivity extends AppCompatActivity {
                         .addOnCompleteListener(SignUpActivity.this, new OnCompleteListener<AuthResult>() {
                             @Override
                             public void onComplete(@NonNull Task<AuthResult> task) {
-                                Toast.makeText(SignUpActivity.this, "You've been Successfully Registered" + task.isSuccessful(), Toast.LENGTH_SHORT).show();
+                                Toast.makeText(SignUpActivity.this, "You've been Successfully Registered", Toast.LENGTH_SHORT).show();
                                 FirebaseUser mFirebaseUser = auth.getCurrentUser();
                                 if(mFirebaseUser != null) {
                                     userID = mFirebaseUser.getUid(); //Do what you need to do with the id

@@ -4,13 +4,18 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.Task;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.firestore.DocumentReference;
@@ -27,6 +32,7 @@ public class ShowUserProfileActivity extends AppCompatActivity {
     FirebaseFirestore fStore;
     String userID;
     private FirebaseAuth auth;
+    FloatingActionButton floatingActionButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,6 +42,8 @@ public class ShowUserProfileActivity extends AppCompatActivity {
         email_tv = findViewById(R.id.email_tv_sp);
         age_tv = findViewById(R.id.age_tv_sp);
         phone_tv = findViewById(R.id.phone_tv_sp);
+        
+        floatingActionButton = findViewById(R.id.floatingbtn_sp);
 
         auth = FirebaseAuth.getInstance();
         fStore = FirebaseFirestore.getInstance();
@@ -57,10 +65,36 @@ public class ShowUserProfileActivity extends AppCompatActivity {
                 }
             });
 
-
-
-
     }
+
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.menu, menu);
+
+        return true;
+    }
+
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+
+        switch (item.getItemId()) {
+            case R.id.menuLogout:
+
+                FirebaseAuth.getInstance().signOut();
+                finish();
+                startActivity(new Intent(this, LoginActivity.class));
+                Toast.makeText(this, "Thank you for using the app", Toast.LENGTH_LONG).show();
+
+                break;
+        }
+
+        return true;
+    }
+
 
 
 }

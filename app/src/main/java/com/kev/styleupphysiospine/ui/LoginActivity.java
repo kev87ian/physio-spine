@@ -8,6 +8,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
+import android.util.Patterns;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -22,6 +23,8 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.kev.styleupphysiospine.MainActivity;
 import com.kev.styleupphysiospine.R;
+
+import java.util.regex.Pattern;
 
 public class LoginActivity extends AppCompatActivity {
 
@@ -87,6 +90,7 @@ private EditText inputPassword, inputEmail;
             public void onClick(View v) {
                 String email = inputEmail.getText().toString();
                 final String password = inputPassword.getText().toString();
+                validateCredentials();
 
                 if (TextUtils.isEmpty(email)) {
                     Toast.makeText(getApplicationContext(), "Enter email address!", Toast.LENGTH_SHORT).show();
@@ -98,13 +102,26 @@ private EditText inputPassword, inputEmail;
                     return;
                 }
 
+//                String emailPattern = "[a-zA-Z0-9._-]+@[a-z]+\\.+[a-z]+";
+//
+//                if(inputEmail.getText().toString().trim().matches(emailPattern)){
+//                    return;
+//
+//                } else {
+//                    Toast.makeText(getApplicationContext(), "Invalid Email", Toast.LENGTH_SHORT).show();
+//                    ProgressDialog progressDialog = new ProgressDialog(LoginActivity.this, R.style.Theme_AppCompat_DayNight_Dialog_Alert);
+//                    progressDialog.hide();
+//                }
+
+
+
                 ProgressDialog progressDialog = new ProgressDialog(LoginActivity.this, R.style.Theme_AppCompat_DayNight_Dialog_Alert);
                 progressDialog.setTitle("Authenticating");
                 progressDialog.setMessage("Checking Credentials");
                 progressDialog.show();
-    //            progressDialog.setCancelable(false);
+                progressDialog.setCancelable(true);
 
-//                progressBar.setVisibility(View.VISIBLE);
+//              progressBar.setVisibility(View.VISIBLE);
 
                 //authenticate user
                 auth.signInWithEmailAndPassword(email, password)
@@ -122,6 +139,7 @@ private EditText inputPassword, inputEmail;
                                     } else {
                                         Toast.makeText(LoginActivity.this, "Login Failed. Please check your credentials", Toast.LENGTH_LONG).show();
                                         progressDialog.dismiss();
+                                        progressDialog.hide();
                                     }
                                 } else {
                                     Intent intent = new Intent(LoginActivity.this, MainActivity.class);
@@ -132,6 +150,9 @@ private EditText inputPassword, inputEmail;
                         });
             }
         });
+    }
+
+    private void validateCredentials() {
     }
 
 }

@@ -13,6 +13,8 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.bumptech.glide.Glide;
 import com.kev.styleupphysiospine.R;
 
+import org.w3c.dom.Text;
+
 import java.util.ArrayList;
 
 public class EquipmentAdapter extends RecyclerView.Adapter<EquipmentAdapter.ViewHolder> {
@@ -40,10 +42,12 @@ public class EquipmentAdapter extends RecyclerView.Adapter<EquipmentAdapter.View
 
         String name  = equipmentModel.getName();
         String imgurl = equipmentModel.getImg_url();
+        String price = equipmentModel.getPrice();
 
         Glide.with(context).load(imgurl).placeholder(R.drawable.logo).into(holder.imageView);
 
         holder.titleTv.setText(name);
+        holder.priceTv.setText(price);
 
     }
 
@@ -56,12 +60,14 @@ public class EquipmentAdapter extends RecyclerView.Adapter<EquipmentAdapter.View
 
         public TextView titleTv;
         public ImageView imageView;
+        public TextView priceTv;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
 
             titleTv = (TextView) itemView.findViewById(R.id.item_title);
             imageView = (ImageView) itemView.findViewById(R.id.item_image);
+            priceTv = (TextView) itemView.findViewById(R.id.item_price);
         }
     }
 

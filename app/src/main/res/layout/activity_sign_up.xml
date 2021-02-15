@@ -66,6 +66,19 @@ android:fitsSystemWindows="true">
         android:layout_marginTop="4dp"
         android:layout_marginBottom="4dp">
         <EditText
+            android:id="@+id/gender_et"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:hint="Gender" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="4dp">
+        <EditText
             android:id="@+id/et_age"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

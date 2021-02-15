@@ -31,7 +31,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class SignUpActivity extends AppCompatActivity {
-    private EditText inputEmail, inputPassword, inputName, inputAge, inputNumber;
+    private EditText inputEmail, inputPassword, inputName, inputAge, inputNumber, inputGender;
     private Button btnSignIn,  btnResetPassword;
     private TextView clickHere;
   //   private ProgressBar progressBar;
@@ -50,9 +50,10 @@ public class SignUpActivity extends AppCompatActivity {
         clickHere = (TextView) findViewById(R.id.clickhereTv);
         inputName = findViewById(R.id.et_name);
         inputAge = findViewById(R.id.et_age);
+        inputGender = findViewById(R.id.gender_et);
         inputNumber = findViewById(R.id.phoneNumber_et);
         firebaseFirestore = FirebaseFirestore.getInstance();
-        //  progressBar = findViewById(R.id.progressbarSignUp);
+         //  progressBar = findViewById(R.id.progressbarSignUp);
 
 
         clickHere.setOnClickListener(new View.OnClickListener() {
@@ -69,6 +70,7 @@ public class SignUpActivity extends AppCompatActivity {
                 String name = inputName.getText().toString().trim();
                 String phoneNumber = inputNumber.getText().toString().trim();
                 String age = inputAge.getText().toString().trim();
+                String gender = inputGender.getText().toString().trim();
 
                 if (TextUtils.isEmpty(name)) {
                     Toast.makeText(getApplicationContext(), "Enter Name!", Toast.LENGTH_SHORT).show();
@@ -89,6 +91,10 @@ public class SignUpActivity extends AppCompatActivity {
                 if (TextUtils.isEmpty(email)) {
                     Toast.makeText(getApplicationContext(), "Enter email address!", Toast.LENGTH_SHORT).show();
                     return;
+                }
+
+                if (TextUtils.isEmpty(gender)){
+                    Toast.makeText(getApplicationContext(), "Gender is required", Toast.LENGTH_SHORT).show();
                 }
 
                 if (TextUtils.isEmpty(password)) {
@@ -116,6 +122,7 @@ public class SignUpActivity extends AppCompatActivity {
                                     user.put("phoneNumber", phoneNumber);
                                     user.put("email", email);
                                     user.put("age", age);
+                                    user.put("gender", gender);
 
                                     documentReference.set(user).addOnSuccessListener(new OnSuccessListener<Void>() {
                                         @Override

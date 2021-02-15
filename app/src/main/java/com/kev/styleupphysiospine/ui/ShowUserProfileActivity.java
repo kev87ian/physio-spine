@@ -28,7 +28,7 @@ import com.google.firebase.storage.StorageReference;
 import com.kev.styleupphysiospine.R;
 
 public class ShowUserProfileActivity extends AppCompatActivity {
-    TextView name_tv, email_tv, age_tv, phone_tv;
+    TextView name_tv, email_tv, age_tv, phone_tv, gender_tv;
     FirebaseFirestore fStore;
     String userID;
     private FirebaseAuth auth;
@@ -42,6 +42,8 @@ public class ShowUserProfileActivity extends AppCompatActivity {
         email_tv = findViewById(R.id.email_tv_sp);
         age_tv = findViewById(R.id.age_tv_sp);
         phone_tv = findViewById(R.id.phone_tv_sp);
+        gender_tv = findViewById(R.id.gender_tv_sp);
+
         
         floatingActionButton = findViewById(R.id.floatingbtn_sp);
 
@@ -61,6 +63,7 @@ public class ShowUserProfileActivity extends AppCompatActivity {
                 name_tv.setText(value.getString("fName"));
                 age_tv.setText(value.getString("age"));
                 email_tv.setText(value.getString("email"));
+                gender_tv.setText(value.getString("gender"));
 
                 }
             });

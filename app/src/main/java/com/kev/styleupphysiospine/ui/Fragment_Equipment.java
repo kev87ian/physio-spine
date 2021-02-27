@@ -31,7 +31,7 @@ import java.util.ArrayList;
 
 public class Fragment_Equipment extends Fragment {
     Context context;
-    private static final String GG_URL = "https://styleupapi.herokuapp.com/equipment";
+    private static final String fraagment_URL = "https://styleupapi.herokuapp.com/equipment";
     private EditText searchEt;
     private RecyclerView equipmentRv;
     ArrayList<EquipmentModel> equipmentModelArrayList;
@@ -60,7 +60,7 @@ public class Fragment_Equipment extends Fragment {
 
     private void loadEquipment() {
 
-          StringRequest stringRequest = new StringRequest(Request.Method.GET, GG_URL, new Response.Listener<String>() {
+          StringRequest stringRequest = new StringRequest(Request.Method.GET, fraagment_URL, new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
                 handleResponse(response);
@@ -70,11 +70,10 @@ public class Fragment_Equipment extends Fragment {
             public void onErrorResponse(VolleyError error) {
                 //on failed response
               //  progressBar.setVisibility(View.GONE);
-                Toast.makeText(context, ""+error, Toast.LENGTH_SHORT).show();
+                Toast.makeText(context, ""+ error, Toast.LENGTH_SHORT).show();
 
             }
         });
-
 
         RequestQueue requestQueue = Volley.newRequestQueue(context);
         requestQueue.add(stringRequest);
@@ -110,7 +109,6 @@ public class Fragment_Equipment extends Fragment {
             equipmentRv.setAdapter(equipmentAdapter);
 
         }
-
         catch (Exception e){
             Toast.makeText(context, ""+e.getMessage(), Toast.LENGTH_SHORT).show();
         }

@@ -26,26 +26,21 @@ public class EquipmentAdapter extends RecyclerView.Adapter<EquipmentAdapter.View
         this.equipmentModelsArrayList = equipmentModelArrayList;
     }
 
-
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View v = LayoutInflater.from(context).inflate(R.layout.sale_item, parent, false);
         return new ViewHolder(v);
-
     }
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-
         EquipmentModel equipmentModel = equipmentModelsArrayList.get(position);
-
         String name  = equipmentModel.getName();
         String imgurl = equipmentModel.getImg_url();
         String price = equipmentModel.getPrice();
 
         Glide.with(context).load(imgurl).placeholder(R.drawable.logo).into(holder.imageView);
-
         holder.titleTv.setText(name);
         holder.priceTv.setText(price);
 

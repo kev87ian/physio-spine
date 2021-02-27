@@ -13,13 +13,14 @@ import android.widget.Toast;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.kev.styleupphysiospine.ui.Fragment_Equipment;
+import com.kev.styleupphysiospine.ui.Fragment_Orthotics;
 import com.kev.styleupphysiospine.ui.LoginActivity;
 import com.kev.styleupphysiospine.ui.ShowUserProfileActivity;
 
 public class MainActivity extends AppCompatActivity {
-
-private Fragment fragmentEquipment;
+    private Fragment fragmentEquipment;
     private FragmentManager fragmentManager;
+    private Fragment fragmentOrthotics;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,10 +28,14 @@ private Fragment fragmentEquipment;
         setContentView(R.layout.activity_main);
 
         fragmentEquipment = new Fragment_Equipment();
+        fragmentOrthotics = new Fragment_Orthotics();
 
         fragmentManager = getSupportFragmentManager();
         fragmentManager.beginTransaction()
                 .add(R.id.frame, fragmentEquipment, "goalgoalFragment").commit();
+        fragmentManager.beginTransaction()
+                .add(R.id.frame, fragmentOrthotics, "goalgoalFragment").commit();
+
     }
 
     @Override
@@ -56,7 +61,6 @@ private Fragment fragmentEquipment;
 
             case R.id.showProfile:
                 startActivity(new Intent(this, ShowUserProfileActivity.class));
-
 
 
                 break;

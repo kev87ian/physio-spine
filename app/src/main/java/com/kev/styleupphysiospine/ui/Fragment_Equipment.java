@@ -32,7 +32,6 @@ import java.util.ArrayList;
 public class Fragment_Equipment extends Fragment {
     Context context;
     private static final String fraagment_URL = "https://styleupapi.herokuapp.com/equipment";
-    private EditText searchEt;
     private RecyclerView equipmentRv;
     ArrayList<EquipmentModel> equipmentModelArrayList;
     EquipmentAdapter equipmentAdapter;

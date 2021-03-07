@@ -11,6 +11,7 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -29,6 +30,7 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
     private FragmentManager fragmentManager;
     private Context context;
     private Fragment activeFragment;
+    Button addToCart;
 
     @BindView(R.id.titleTv)
     TextView titleTv;
@@ -40,6 +42,9 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
+        addToCart = findViewById(R.id.addToCart);
+
+//        addToCart.
 
         initFragments();
         bottomNavigationView.setOnNavigationItemSelectedListener((BottomNavigationView.OnNavigationItemSelectedListener) this);

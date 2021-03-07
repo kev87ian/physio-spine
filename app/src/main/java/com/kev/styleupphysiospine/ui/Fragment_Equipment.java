@@ -10,6 +10,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
@@ -35,6 +36,7 @@ public class Fragment_Equipment extends Fragment {
     private RecyclerView equipmentRv;
     ArrayList<EquipmentModel> equipmentModelArrayList;
     EquipmentAdapter equipmentAdapter;
+    Button addToCart;
 
 
     public Fragment_Equipment() {
@@ -52,9 +54,15 @@ public class Fragment_Equipment extends Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment__equipment, container, false);
         equipmentRv = view.findViewById(R.id.equipment_recycler_view);
+        addToCart = view.findViewById(R.id.addToCart);
+        addToCart.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+         Toast.makeText(context, "Added to Cart", Toast.LENGTH_SHORT). show();
+            }
+        });
         loadEquipment();
         return view;
-
     }
 
     private void loadEquipment() {
@@ -99,11 +107,6 @@ public class Fragment_Equipment extends Fragment {
                 equipmentModelArrayList.add(equipmentModel);
             }
 
-            //setup adapter
-//            adapterGG = new AdapterGG(context, goalGoalArrayList);
-//            goalGoalRv.setAdapter(adapterGG);
-//            progressBar.setVisibility(View.GONE);
-//
             equipmentAdapter = new EquipmentAdapter(context, equipmentModelArrayList);
             equipmentRv.setAdapter(equipmentAdapter);
 
@@ -112,6 +115,8 @@ public class Fragment_Equipment extends Fragment {
             Toast.makeText(context, ""+e.getMessage(), Toast.LENGTH_SHORT).show();
         }
     }
+    private void setAddToCartFunction(){
 
+    }
 
 }
